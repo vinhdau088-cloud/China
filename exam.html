@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luyện thi - ChineseMaster</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+<div class="logo">
+📝 ChineseMaster AI
+</div>
+
+
+<button class="menu-btn">
+☰
+</button>
+
+
+<nav>
+
+<a href="index.html">Trang chủ</a>
+<a href="hsk.html">HSK</a>
+<a href="tocfl.html">TOCFL</a>
+<a href="dictionary.html">Từ điển</a>
+<a href="community.html">Cộng đồng</a>
+<a href="profile.html">Hồ sơ</a>
+
+</nav>
+
+</header>
+
+
+
+
+
+<section class="hero">
+
+<h1>
+📝 Luyện thi HSK & TOCFL
+</h1>
+
+<p>
+Luyện dịch • Trắc nghiệm • Đọc hiểu • Xếp câu
+</p>
+
+</section>
+
+
+
+
+
+<section class="container">
+
+
+<h2>
+Chọn dạng bài
+</h2>
+
+
+<div class="grid">
+
+
+
+<div class="card">
+
+<h3>
+🇨🇳 Trung → Việt
+</h3>
+
+<p>
+Dịch câu tiếng Trung sang tiếng Việt
+</p>
+
+<button onclick="start('translate')">
+Bắt đầu
+</button>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h3>
+🇻🇳 Việt → Trung
+</h3>
+
+<p>
+Viết câu tiếng Trung hoàn chỉnh
+</p>
+
+<button onclick="start('write')">
+Bắt đầu
+</button>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h3>
+🔤 Trắc nghiệm
+</h3>
+
+<p>
+Chọn đáp án đúng
+</p>
+
+<button onclick="start('quiz')">
+Bắt đầu
+</button>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h3>
+🔀 Xếp câu
+</h3>
+
+<p>
+Sắp xếp từ thành câu đúng
+</p>
+
+<button onclick="start('arrange')">
+Bắt đầu
+</button>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h3>
+📖 Đọc hiểu
+</h3>
+
+<p>
+Đọc đoạn văn và trả lời
+</p>
+
+<button onclick="start('reading')">
+Bắt đầu
+</button>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card" id="question">
+
+
+<h2>
+Ví dụ bài thi
+</h2>
+
+
+<h3>
+朋友 nghĩa là gì?
+</h3>
+
+
+<div>
+
+<button>
+A. Giáo viên
+</button>
+
+<br><br>
+
+<button>
+B. Bạn bè
+</button>
+
+<br><br>
+
+<button>
+C. Gia đình
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+<script>
+
+
+function start(type){
+
+
+let box=document.getElementById("question");
+
+
+if(type==="translate"){
+
+
+box.innerHTML=`
+
+<h2>Trung → Việt</h2>
+
+<h3>
+我每天学习中文。
+</h3>
+
+<textarea placeholder="Nhập đáp án"></textarea>
+
+<button>Nộp bài</button>
+
+`;
+
+
+}
+
+
+
+
+if(type==="write"){
+
+
+box.innerHTML=`
+
+<h2>Việt → Trung</h2>
+
+<h3>
+Tôi thích học tiếng Trung.
+</h3>
+
+<textarea placeholder="Viết câu tiếng Trung"></textarea>
+
+<button>Nộp bài</button>
+
+`;
+
+}
+
+
+
+
+
+if(type==="quiz"){
+
+
+box.innerHTML=`
+
+<h2>Trắc nghiệm</h2>
+
+<h3>
+学习 nghĩa là gì?
+</h3>
+
+<button>A. Học tập</button>
+
+<button>B. Đi làm</button>
+
+<button>C. Ăn uống</button>
+
+`;
+
+}
+
+
+
+
+if(type==="arrange"){
+
+
+box.innerHTML=`
+
+<h2>Xếp câu</h2>
+
+<p>
+我 / 中文 / 学习
+</p>
+
+<button>
+Sắp xếp
+</button>
+
+`;
+
+}
+
+
+
+
+
+if(type==="reading"){
+
+
+box.innerHTML=`
+
+<h2>Đọc hiểu</h2>
+
+<p>
+小明每天学习中文。
+他喜欢汉语。
+</p>
+
+
+<h3>
+小明喜欢什么？
+</h3>
+
+
+<button>A. 中文</button>
+
+<button>B. 英语</button>
+
+
+`;
+
+}
+
+
+}
+
+
+</script>
+
+
+
+<script src="js/app.js"></script>
+
+
+</body>
+
+</html>

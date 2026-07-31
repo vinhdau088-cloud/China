@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Từ điển - ChineseMaster</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+<div class="logo">
+📖 ChineseMaster AI
+</div>
+
+
+<button class="menu-btn">
+☰
+</button>
+
+
+<nav>
+
+<a href="index.html">Trang chủ</a>
+<a href="hsk.html">HSK</a>
+<a href="tocfl.html">TOCFL</a>
+<a href="dictionary.html">Từ điển</a>
+<a href="community.html">Cộng đồng</a>
+<a href="profile.html">Hồ sơ</a>
+
+</nav>
+
+
+</header>
+
+
+
+
+
+<section class="hero">
+
+<h1>
+🔎 Tra từ tiếng Trung
+</h1>
+
+<p>
+HSK • TOCFL • Phồn thể • Giản thể
+</p>
+
+</section>
+
+
+
+
+
+
+<section class="container">
+
+
+
+<div class="card">
+
+
+<h2>
+Tìm kiếm
+</h2>
+
+
+<input 
+id="search"
+type="text"
+placeholder="Nhập chữ Hán, Pinyin hoặc tiếng Việt..."
+style="
+width:100%;
+padding:15px;
+border-radius:15px;
+border:1px solid #ddd;
+font-size:16px;
+">
+
+
+<button 
+onclick="searchWord()"
+style="
+margin-top:15px;
+padding:12px 25px;
+border:0;
+border-radius:20px;
+background:#7c3aed;
+color:white;
+cursor:pointer;
+">
+
+🔍 Tra từ
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div id="result" class="card">
+
+
+<h2>
+Ví dụ kết quả
+</h2>
+
+
+<h1>
+學習
+</h1>
+
+
+<p>
+<b>Pinyin:</b> xuéxí
+</p>
+
+
+<p>
+<b>Zhuyin:</b> ㄒㄩㄝˊ ㄒㄧˊ
+</p>
+
+
+<p>
+<b>Nghĩa:</b> Học tập
+</p>
+
+
+<p>
+<b>Cấp độ:</b> HSK 2 / TOCFL A1
+</p>
+
+
+
+<hr>
+
+
+<p>
+📌 Ví dụ:
+
+</p>
+
+
+<p>
+我喜歡學習中文。
+</p>
+
+
+<p>
+Tôi thích học tiếng Trung.
+</p>
+
+
+
+<button>
+🔊 Nghe
+</button>
+
+
+<button>
+❤️ Lưu từ
+</button>
+
+
+<button>
+🃏 Tạo Flashcard
+</button>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<script>
+
+
+function searchWord(){
+
+
+let word=document.getElementById("search").value;
+
+
+if(word){
+
+document.getElementById("result").innerHTML=`
+
+<h2>Kết quả tìm kiếm</h2>
+
+<h1>${word}</h1>
+
+<p>Đang tìm dữ liệu...</p>
+
+`;
+
+
+}
+
+
+}
+
+
+</script>
+
+
+
+
+<script src="js/app.js"></script>
+
+
+</body>
+
+</html>

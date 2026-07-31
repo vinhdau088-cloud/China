@@ -1,0 +1,56 @@
+[
+  {
+    "id":1,
+    "hanzi":"你好",
+    "pinyin":"nǐ hǎo",
+    "zhuyin":"ㄋㄧˇ ㄏㄠˇ",
+    "meaning":"Xin chào",
+    "level":"HSK1",
+    "example":"你好，我叫小明。",
+    "example_vi":"Xin chào, tôi tên là Tiểu Minh."
+  },
+
+  {
+    "id":2,
+    "hanzi":"谢谢",
+    "pinyin":"xiè xie",
+    "zhuyin":"ㄒㄧㄝˋ ㄒㄧㄝ",
+    "meaning":"Cảm ơn",
+    "level":"HSK1",
+    "example":"谢谢你的帮助。",
+    "example_vi":"Cảm ơn sự giúp đỡ của bạn."
+  },
+
+  {
+    "id":3,
+    "hanzi":"学习",
+    "pinyin":"xué xí",
+    "zhuyin":"ㄒㄩㄝˊ ㄒㄧˊ",
+    "meaning":"Học tập",
+    "level":"HSK1",
+    "example":"我学习中文。",
+    "example_vi":"Tôi học tiếng Trung."
+  },
+
+  {
+    "id":4,
+    "hanzi":"朋友",
+    "pinyin":"péng you",
+    "zhuyin":"ㄆㄥˊ ㄧㄡ",
+    "meaning":"Bạn bè",
+    "level":"HSK1",
+    "example":"他是我的朋友。",
+    "example_vi":"Anh ấy là bạn của tôi."
+  },
+
+  {
+    "id":5,
+    "hanzi":"老师",
+    "pinyin":"lǎo shī",
+    "zhuyin":"ㄌㄠˇ ㄕ",
+    "meaning":"Giáo viên",
+    "level":"HSK1",
+    "example":"她是我的老师。",
+    "example_vi":"Cô ấy là giáo viên của tôi."
+  }
+]

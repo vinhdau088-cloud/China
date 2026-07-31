@@ -1,70 +1,120 @@
 // ChineseMaster AI
 
-console.log("ChineseMaster AI Loaded");
 
-// Hiệu ứng xuất hiện khi cuộn
-const cards = document.querySelectorAll(".card, .course, .flashcard");
+console.log("ChineseMaster AI started");
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = "1";
-      entry.target.style.transform = "translateY(0)";
+
+
+// Menu mobile
+
+const menuBtn = document.querySelector(".menu-btn");
+
+const nav = document.querySelector("nav");
+
+
+if(menuBtn){
+
+    menuBtn.onclick = function(){
+
+        if(nav.style.display === "block"){
+
+            nav.style.display="none";
+
+        }else{
+
+            nav.style.display="block";
+
+            nav.style.background="white";
+
+            nav.style.padding="20px";
+
+            nav.style.position="absolute";
+
+            nav.style.top="75px";
+
+            nav.style.right="20px";
+
+            nav.style.borderRadius="20px";
+
+        }
+
     }
-  });
-});
 
-cards.forEach((card) => {
-  card.style.opacity = "0";
-  card.style.transform = "translateY(30px)";
-  card.style.transition = "all .5s ease";
-  observer.observe(card);
-});
-
-// Thanh tìm kiếm (demo)
-const input = document.querySelector(".search input");
-const button = document.querySelector(".search button");
-
-if (input && button) {
-  button.addEventListener("click", () => {
-    const keyword = input.value.trim();
-
-    if (keyword === "") {
-      alert("Vui lòng nhập từ cần tìm.");
-      return;
-    }
-
-    alert("Bạn vừa tìm: " + keyword);
-  });
-
-  input.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-      button.click();
-    }
-  });
 }
 
-// Flashcard demo
-const flashButton = document.querySelector(".flashcard button");
 
-if (flashButton) {
-  flashButton.addEventListener("click", () => {
-    flashButton.innerHTML = "❤️ Đã lưu";
-    flashButton.style.background = "#16a34a";
-  });
+
+
+// Hiệu ứng card
+
+const cards=document.querySelectorAll(".card");
+
+
+cards.forEach(card=>{
+
+
+    card.addEventListener("mouseenter",()=>{
+
+        card.style.boxShadow=
+        "0 20px 40px rgba(0,0,0,.15)";
+
+    });
+
+
+
+    card.addEventListener("mouseleave",()=>{
+
+        card.style.boxShadow=
+        "0 10px 30px rgba(0,0,0,.08)";
+
+    });
+
+
+});
+
+
+
+
+// Nút bắt đầu học
+
+const startButton=document.querySelector(".hero button");
+
+
+if(startButton){
+
+
+startButton.onclick=function(){
+
+
+    window.location.href="hsk.html";
+
+
 }
 
-// Cuộn mượt
-document.querySelectorAll("a[href^='#']").forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
 
-    const target = document.querySelector(link.getAttribute("href"));
+}
 
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth"
-      });
-    }
-  });
-});
+
+
+
+// Lưu trạng thái học demo
+
+
+let progress = localStorage.getItem("learningProgress");
+
+
+if(!progress){
+
+    localStorage.setItem(
+        "learningProgress",
+        "0"
+    );
+
+}
+
+
+
+console.log(
+"Progress:",
+localStorage.getItem("learningProgress")
+);
